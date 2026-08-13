@@ -77,7 +77,7 @@ It can retrieve information from documents, perform structured queries against a
                            ▼
                       Final Answer
 ```
-
+![Nexus-Agent Architecture](docs/architecture.png)
 ### MCP Execution Boundary
 
 The agent is intentionally decoupled from the underlying RAG and database implementations.
