@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+nexs/
+.env
+.pytest_cache/
+
+# Phase 3 — generated/downloaded, not source
+.cache/
+data/index/
+
+# Phase 5 — generated SQLite database, not source (nexusai/db/sql_database.py
+# rebuilds it deterministically from the seed data on first use)
+data/nexus.db

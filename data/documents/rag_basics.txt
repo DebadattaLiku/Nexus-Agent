@@ -1,0 +1,7 @@
+RAG Basics
+
+Retrieval-Augmented Generation (RAG) combines a retrieval step over an
+external knowledge base with a generation step from a language model. A
+typical pipeline embeds documents into vectors, stores them in a vector
+index such as FAISS, retrieves the most relevant chunks for a query, and
+feeds them to the model as context alongside the user's question.

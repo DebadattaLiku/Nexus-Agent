@@ -1,0 +1,39 @@
+# Phase 1 — Document MCP Server + client
+# Later phases will add LangGraph, FastAPI, PostgreSQL, FAISS, etc.
+
+mcp==2.0.0
+pytest==9.1.1
+
+# Phase 2 — LLM + MCP tool calling
+# Default provider: Groq (free, no-credit-card developer tier).
+groq==1.6.0
+# Kept available as an opt-in provider (LLM_PROVIDER=anthropic); not required
+# for the default free-tier setup.
+anthropic==0.121.0
+python-dotenv==1.1.0
+
+# Phase 3 — semantic RAG (real embeddings + FAISS vector search)
+numpy>=1.26
+faiss-cpu>=1.8
+# Free, local, HF-model-backed embeddings via ONNX Runtime (no torch, no
+# paid API, no API key). Model weights are downloaded from Hugging Face once
+# and cached on disk; the deterministic "hashing" provider
+# (nexusai/rag/embeddings.py) needs no download at all and is what the test
+# suite uses.
+fastembed>=0.3
+
+# Phase 4 — explicit LangGraph-based agent orchestration (replaces the
+# linear tool-calling loop in agent/tool_agent.py with a stateful graph).
+# Free/open-source, no additional API key beyond the existing GROQ_API_KEY.
+langgraph>=0.2
+
+# Phase 5 — SQL MCP server + multi-tool agent. The database itself uses
+# sqlite3 (Python standard library, no new dependency); no new package is
+# required for this phase.
+
+# Phase 6 — minimal FastAPI layer exposing the existing LangGraph agent
+# over HTTP (POST /query). uvicorn was already present transitively (via
+# `mcp`) but is pinned explicitly here since the API now depends on it
+# directly to run.
+fastapi>=0.115
+uvicorn>=0.30

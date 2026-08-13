@@ -1,0 +1,7 @@
+Model Context Protocol (MCP) Overview
+
+MCP is an open protocol that standardizes how applications provide context
+to large language models. It separates the concerns of providing tools and
+data (servers) from consuming them (clients and hosts). An MCP server can
+expose tools, resources, and prompts. Tools are functions the model can
+call to take action or retrieve information.

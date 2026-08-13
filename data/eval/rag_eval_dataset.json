@@ -1,0 +1,29 @@
+{
+  "description": "Small deterministic evaluation set for nexusai.rag.evaluation. Each example pairs a query with the source document(s) in data/documents that should be retrieved for it.",
+  "examples": [
+    {
+      "query": "What is the Model Context Protocol and how does it separate tools from clients?",
+      "expected_sources": ["mcp_overview.txt"]
+    },
+    {
+      "query": "How does an MCP server expose tools, resources, and prompts?",
+      "expected_sources": ["mcp_overview.txt"]
+    },
+    {
+      "query": "How does retrieval-augmented generation combine retrieval with a language model?",
+      "expected_sources": ["rag_basics.txt"]
+    },
+    {
+      "query": "What role does a vector index like FAISS play in a RAG pipeline?",
+      "expected_sources": ["rag_basics.txt"]
+    },
+    {
+      "query": "How does LangGraph model agent workflows as nodes and edges?",
+      "expected_sources": ["langgraph_notes.txt"]
+    },
+    {
+      "query": "Why is LangGraph well suited to multi-agent systems with cycles and branching?",
+      "expected_sources": ["langgraph_notes.txt"]
+    }
+  ]
+}

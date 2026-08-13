@@ -1,0 +1,7 @@
+LangGraph Notes
+
+LangGraph models agent workflows as a graph of nodes and edges, where each
+node is typically a function or an LLM call, and edges define control flow,
+including conditional branching and cycles. This makes it well suited for
+building multi-agent systems with explicit state management, unlike purely
+linear chains.
