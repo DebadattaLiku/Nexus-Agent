@@ -1,29 +1,252 @@
 {
-  "description": "Small deterministic evaluation set for nexusai.rag.evaluation. Each example pairs a query with the source document(s) in data/documents that should be retrieved for it.",
   "examples": [
     {
-      "query": "What is the Model Context Protocol and how does it separate tools from clients?",
-      "expected_sources": ["mcp_overview.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "What is the Model Context Protocol and how does it separate tools from clients?"
     },
     {
-      "query": "How does an MCP server expose tools, resources, and prompts?",
-      "expected_sources": ["mcp_overview.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "How does an MCP server expose tools, resources, and prompts?"
     },
     {
-      "query": "How does retrieval-augmented generation combine retrieval with a language model?",
-      "expected_sources": ["rag_basics.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "What problem does MCP solve when connecting language models to external capabilities?"
     },
     {
-      "query": "What role does a vector index like FAISS play in a RAG pipeline?",
-      "expected_sources": ["rag_basics.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "How does MCP standardize the way applications provide context to language models?"
     },
     {
-      "query": "How does LangGraph model agent workflows as nodes and edges?",
-      "expected_sources": ["langgraph_notes.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "What are the main components exposed by an MCP server?"
     },
     {
-      "query": "Why is LangGraph well suited to multi-agent systems with cycles and branching?",
-      "expected_sources": ["langgraph_notes.txt"]
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "Why is separating the client from the tool implementation useful in MCP?"
+    },
+    {
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "How do applications interact with tools through the Model Context Protocol?"
+    },
+    {
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "What does MCP standardize between AI applications and external services?"
+    },
+    {
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "What is the role of tools in an MCP server?"
+    },
+    {
+      "expected_sources": [
+        "mcp_overview.txt"
+      ],
+      "query": "How does an MCP architecture make external capabilities available to an LLM?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "What is retrieval-augmented generation?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "How does retrieval-augmented generation combine retrieval with a language model?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "What role does a vector index like FAISS play in a RAG pipeline?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "Why are documents converted into vectors in a RAG system?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "How does a RAG system find relevant information for a user question?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "What happens after relevant document chunks are retrieved in RAG?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "Why does RAG use an external knowledge base instead of relying only on the language model?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "How are documents represented before semantic retrieval in a RAG pipeline?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "What is the purpose of retrieving relevant chunks before generation?"
+    },
+    {
+      "expected_sources": [
+        "rag_basics.txt"
+      ],
+      "query": "How does a vector database or index support retrieval-augmented generation?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "How does LangGraph model agent workflows as nodes and edges?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "Why is LangGraph well suited to multi-agent systems with cycles and branching?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "What is the purpose of representing an agent workflow as a graph?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "How do nodes and edges represent computation and transitions in LangGraph?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "Why can graph-based workflows support branching agent behavior?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "How can LangGraph represent workflows that contain cycles?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "What makes LangGraph useful for orchestrating complex agent workflows?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "How does LangGraph differ conceptually from a simple linear agent pipeline?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "What role do edges play in a LangGraph workflow?"
+    },
+    {
+      "expected_sources": [
+        "langgraph_notes.txt"
+      ],
+      "query": "Why are branching and cycles important for multi-agent workflows?"
     }
+,
+{
+  "query": "How do MCP and LangGraph differ in the way they structure AI application workflows and tool interactions?",
+  "expected_sources": [
+    "mcp_overview.txt",
+    "langgraph_notes.txt"
+  ]
+},
+{
+  "query": "How could a graph-based agent workflow make use of the standardized tools provided through MCP?",
+  "expected_sources": [
+    "mcp_overview.txt",
+    "langgraph_notes.txt"
+  ]
+},
+{
+  "query": "How do external knowledge retrieval and graph-based agent orchestration address different parts of an AI system?",
+  "expected_sources": [
+    "rag_basics.txt",
+    "langgraph_notes.txt"
+  ]
+},
+{
+  "query": "How could retrieval-augmented generation and MCP work together to provide an AI model with information from external sources?",
+  "expected_sources": [
+    "rag_basics.txt",
+    "mcp_overview.txt"
+  ]
+},
+{
+  "query": "How are RAG retrieval, MCP tools, and LangGraph workflows related in a system that needs both external information and tool execution?",
+  "expected_sources": [
+    "rag_basics.txt",
+    "mcp_overview.txt",
+    "langgraph_notes.txt"
+  ]
+},
+{
+  "query": "What mechanism allows a language model to obtain relevant information from a knowledge base rather than relying entirely on its pretrained knowledge?",
+  "expected_sources": [
+    "rag_basics.txt"
+  ]
+},
+{
+  "query": "What architectural abstraction lets an AI application interact with external capabilities without tightly coupling the application to each tool implementation?",
+  "expected_sources": [
+    "mcp_overview.txt"
+  ]
+},
+{
+  "query": "What type of workflow representation is useful when an agent needs conditional transitions, branching, and repeated execution?",
+  "expected_sources": [
+    "langgraph_notes.txt"
+  ]
+},
+{
+  "query": "What happens between a user's question and the language model generating an answer in a retrieval-augmented system?",
+  "expected_sources": [
+    "rag_basics.txt"
+  ]
+},
+{
+  "query": "Why might an AI workflow need both retrieval of relevant context and structured execution of external capabilities?",
+  "expected_sources": [
+    "rag_basics.txt",
+    "mcp_overview.txt"
+  ]
+}
   ]
 }
